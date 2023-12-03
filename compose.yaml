@@ -1,0 +1,9 @@
+services:
+  develop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wio-terminal-embeding
+    volumes:
+      - .:/workspace:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
