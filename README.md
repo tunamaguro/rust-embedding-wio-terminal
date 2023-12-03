@@ -1,4 +1,4 @@
-# rust-embeding-wio-terminal
+# rust-embedding-wio-terminal
 「基礎から学ぶ組み込みRust」をやるリポジトリ
 
 ## 商品ページ
