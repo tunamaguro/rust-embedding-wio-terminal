@@ -4,7 +4,7 @@
         "../compose.yaml"
     ],
     "service": "develop",
-    "workspaceFolder": "/workspace",
+    "workspaceFolder": "/home/vscode/workspace",
     "customizations": {
         "vscode": {
             "settings": {
