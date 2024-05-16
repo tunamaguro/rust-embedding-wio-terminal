@@ -6,4 +6,4 @@ edition = "2021"
 [dependencies]
 
 [workspace]
-members = ["blink"]
+members = ["blink", "wio_examples"]
