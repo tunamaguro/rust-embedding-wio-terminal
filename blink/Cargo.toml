@@ -1,0 +1,9 @@
+[package]
+authors = ["tunamaguro <tsu7magu6@gmail.com>"]
+name = "blink"
+edition = "2018"
+version = "0.1.0"
+
+[dependencies]
+support = { path = "support" }
+panic-halt = "0.2"

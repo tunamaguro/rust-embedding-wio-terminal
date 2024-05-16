@@ -8,8 +8,8 @@ services:
       - .:/home/vscode/workspace:cached
     command: /bin/sh -c "while sleep 1000; do :; done"
     # FIXME: 普通に起動するとおそらくカーネル周りの権限が不足して書き込めないのでprivilegedするが、明らかに過剰な権限なので最小の権限に絞る
-    # privileged: true
-    # devices:
-    #   - /dev/ttyACM0:/dev/ttyACM0
+    privileged: true
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
 
       
