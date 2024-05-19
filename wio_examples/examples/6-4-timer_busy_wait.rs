@@ -27,10 +27,21 @@ fn main() -> ! {
     let mut sets: Sets = Pins::new(peripherals.PORT).split();
     let mut led = Led::new(sets.user_led, &mut sets.port);
 
+    let core = CorePeripherals::take().unwrap();
+    let mut clocks = GenericClockController::with_external_32kosc(
+        peripherals.GCLK,
+        &mut peripherals.MCLK,
+        &mut peripherals.OSC32KCTRL,
+        &mut peripherals.OSCCTRL,
+        &mut peripherals.NVMCTRL,
+    );
+
     // TODO: Delay構造体オブジェクトを取得する
+    let mut delay = Delay::new(core.SYST, &mut clocks);
 
     loop {
         // TODO: Lチカのコードを書く
-        
+        led.toggle();
+        delay.delay_ms(1000_u16);
     }
 }
