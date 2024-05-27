@@ -6,4 +6,4 @@ edition = "2021"
 [dependencies]
 
 [workspace]
-members = ["blink", "eg-playground", "wio_examples"]
+members = ["blink", "eg-playground", "wio_examples", "wio_splash"]
