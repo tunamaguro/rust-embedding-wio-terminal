@@ -51,5 +51,10 @@ fn main() -> ! {
 
     // TODO: スプラッシュ画面を描画する
 
+    let raw: ImageRaw<Rgb565, raw::LittleEndian> =
+        ImageRawLE::new(include_bytes!("./assets/ferris.raw"), 86, 64);
+    let splash = WioSplash::new(Rgb565::GREEN, raw);
+    splash.draw(&mut display).unwrap();
+
     loop {}
 }

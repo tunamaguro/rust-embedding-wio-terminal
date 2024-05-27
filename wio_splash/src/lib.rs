@@ -1,8 +1,9 @@
+#![no_std]
 use embedded_graphics::{
     egcircle, egrectangle, egtext,
     fonts::Font8x16,
     image::{Image, ImageRawLE},
-    pixelcolor::{Bgr565, Rgb565},
+    pixelcolor::Rgb565,
     prelude::*,
     primitive_style, text_style,
 };
@@ -87,7 +88,6 @@ impl<'a> WioSplash<'a> {
         let image = Image::new(&self.image, top_left);
         image.draw(display)
     }
-    
 }
 
 impl<'a> Drawable<Rgb565> for WioSplash<'a> {

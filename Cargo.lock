@@ -1054,6 +1054,7 @@ dependencies = [
  "micromath",
  "nb 0.1.3",
  "panic-halt",
+ "wio_splash",
  "wio_terminal",
 ]
 
