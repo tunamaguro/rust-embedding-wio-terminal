@@ -77,7 +77,8 @@ where
         top_left = (0, 0),
         bottom_right = (SCREEN_WIDTH - 1, FONT_HEIGHT),
         style = primitive_style!(fill_color = Rgb565::BLACK)
-    ).draw(display)?;
+    )
+    .draw(display)?;
 
     // TODO: 現在のタイムスタンプを取得する
     let counter = unsafe { CTX.as_ref().unwrap().timer_counter };

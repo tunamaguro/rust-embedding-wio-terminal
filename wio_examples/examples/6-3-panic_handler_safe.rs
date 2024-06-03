@@ -24,11 +24,8 @@ use wio::prelude::*;
 use wio::{entry, Pins, Sets};
 
 // 絶対に初期化しないといけないので、いったんNoneを持つRefCellで初期化する
-static UART: Mutex<
-    RefCell<
-        Option<UART2<Sercom2Pad1<Pb27<PfC>>, Sercom2Pad0<Pb26<PfC>>, (), ()>>,
-    >,
-> = Mutex::new(RefCell::new(None));
+static UART: Mutex<RefCell<Option<UART2<Sercom2Pad1<Pb27<PfC>>, Sercom2Pad0<Pb26<PfC>>, (), ()>>>> =
+    Mutex::new(RefCell::new(None));
 
 #[entry]
 fn main() -> ! {

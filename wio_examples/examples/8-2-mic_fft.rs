@@ -149,6 +149,8 @@ fn main() -> ! {
 
     // FFTの窓関数としてHann窓を使うので係数を計算しておく
     // 振幅の正規化用に最大振幅で割っておく
+    // https://www.onosokki.co.jp/HP-WK/c_support/newreport/analyzer/FFT4/fft_13.htm
+    // https://en.wikipedia.org/wiki/Hann_function
     let mut hann_factor = [0f32; FFT_POINTS];
     for i in 0..FFT_POINTS {
         use core::f32::consts::PI;

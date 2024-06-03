@@ -62,7 +62,8 @@ fn main() -> ! {
     let slave_addr = 0x18;
     let who_am_i_reg = 0x0f;
     let mut data: [u8; 1] = [0];
-    i2c.write_read(slave_addr, &[who_am_i_reg], &mut data).unwrap();
+    i2c.write_read(slave_addr, &[who_am_i_reg], &mut data)
+        .unwrap();
 
     loop {
         writeln!(&mut serial, "device id = 0x{:x}", data[0]).unwrap();
